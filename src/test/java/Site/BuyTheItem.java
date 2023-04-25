@@ -55,6 +55,8 @@ public class BuyTheItem {
         driver.get("https://magento.softwaretestingboard.com/checkout/cart/");
 
 
+
+
         WebElement Select2= driver.findElement(By.className("counter-number"));
         Select2.click();
 

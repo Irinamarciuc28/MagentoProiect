@@ -22,7 +22,7 @@ public class DeleteItem {
         driver.get("https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/");
         driver.manage().window().maximize();
 
-        //de facut wait
+        // wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 
@@ -39,7 +39,7 @@ public class DeleteItem {
         SignIn.click();
 
         WebElement NewSearch = driver.findElement(By.id("search"));
-        String NewSearchValue= "Pants";
+        String NewSearchValue= "Shorts";
         NewSearch.sendKeys(NewSearchValue);
         NewSearch.submit();
 
@@ -49,11 +49,14 @@ public class DeleteItem {
         WebElement SelectSize = driver.findElement(By.id("option-label-size-143-item-177"));
         SelectSize.click();
 
-        WebElement SelectColor= driver.findElement(By.id("option-label-color-93-item-57"));
+        WebElement SelectColor= driver.findElement(By.id("option-label-color-93-item-50"));
         SelectColor.click();
 
         WebElement Select = driver.findElement(By.id("product-addtocart-button"));
         Select.click();
+
+        // wait
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 
         driver.get("https://magento.softwaretestingboard.com/checkout/cart/");
