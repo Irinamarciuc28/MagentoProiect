@@ -23,7 +23,7 @@ public class CreateAccount {
         driver.manage().window().maximize();
 
         WebElement FirstName = driver.findElement(By.id("firstname"));
-        String FirstNameValue = "Elena";
+        String FirstNameValue = "Ioana";
         FirstName.sendKeys(FirstNameValue);
 
         WebElement LastName = driver.findElement(By.id("lastname"));
@@ -35,15 +35,15 @@ public class CreateAccount {
         CheckBox.click();
 
         WebElement EmailAddress = driver.findElement(By.id("email_address"));
-        String EmailAddressValue = "marciuc.elena@yahoo.com";
+        String EmailAddressValue = "marciuc.ioana@yahoo.com";
         EmailAddress.sendKeys(EmailAddressValue);
 
         WebElement Password = driver.findElement(By.id("password"));
-        String PasswordValue="Elena1988..";
+        String PasswordValue="Ioana1988..";
         Password.sendKeys(PasswordValue);
 
         WebElement PasswordConfirm = driver.findElement(By.id("password-confirmation"));
-        String PasswordConfirmValue="Elena1988..";
+        String PasswordConfirmValue="Ioana1988..";
         PasswordConfirm.sendKeys(PasswordConfirmValue);
 
         WebElement CreateAccount = driver.findElement(By.className("submit"));
